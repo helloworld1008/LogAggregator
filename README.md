@@ -12,7 +12,10 @@ This tool is modular. You can add modules to process a new category of log files
 Example: Your application added a new type of log file named serverhealth.log.N where N is any number. Additionally, this log file uses timestamp format DD-MM-YYYY
 
  ````bash
- $ ls -l
-
-
+$ ls -l
+$ serverhealth.log.5
+$ serverhealth.log.4
+$ serverhealth.log.3
+$ serverhealth.log.2
+$ serverhealth.log.1
 ````
