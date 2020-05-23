@@ -48,3 +48,42 @@ class serverhealth(Plugin):
         log_filename_pattern = 'serverhealth.log*'
 [root@localhost plugins]# 
 ````
+
+## Installation
+
+Download the zip file of this repository to your Linux system and unzip it. 
+
+````bash
+$ ls -ltra
+total 12
+-rw-r--r--.  1 root root 4649 May 23 23:34 LogAggregator-master.zip
+dr-xr-x---. 14 root root 4096 May 23 23:34 ..
+drwxr-xr-x.  2 root root   38 May 23 23:34 .
+$ unzip LogAggregator-master.zip 
+Archive:  LogAggregator-master.zip
+5dc3b746c632af937a322d1bc1477aec6260d709
+   creating: LogAggregator-master/
+  inflating: LogAggregator-master/PluginManager.py  
+  inflating: LogAggregator-master/README.md  
+  inflating: LogAggregator-master/logaggregator.py  
+   creating: LogAggregator-master/plugins/
+  inflating: LogAggregator-master/plugins/plugin_nbi.py  
+  inflating: LogAggregator-master/plugins/plugin_nmstta.py  
+$ ls -ltra
+total 12
+drwxr-xr-x.  3 root root   86 May 16 01:28 LogAggregator-master
+-rw-r--r--.  1 root root 4649 May 23 23:34 LogAggregator-master.zip
+dr-xr-x---. 14 root root 4096 May 23 23:34 ..
+drwxr-xr-x.  3 root root   66 May 23 23:34 .
+$ cd LogAggregator-master
+$ ls -ltra
+total 16
+-rw-r--r--. 1 root root 2095 May 16 01:28 README.md
+drwxr-xr-x. 2 root root   51 May 16 01:28 plugins
+-rwxr-xr-x. 1 root root  761 May 16 01:28 PluginManager.py
+-rwxr-xr-x. 1 root root 5670 May 16 01:28 logaggregator.py
+drwxr-xr-x. 3 root root   86 May 16 01:28 .
+drwxr-xr-x. 3 root root   66 May 23 23:34 ..
+$
+
+````
