@@ -135,7 +135,11 @@ total 76356
 drwxr-xr-x.  2 root root      259 Apr 29 09:17 .
 dr-xr-x---. 14 root root     4096 May 23 23:34 ..
 $
-$
+```
+
+
+Navigate to the directory containing the script and execute it as shown below.
+```
 $ cd /home/user/LogAggregator-master
 $ ls -l
 total 16
