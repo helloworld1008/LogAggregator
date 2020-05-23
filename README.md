@@ -87,3 +87,27 @@ drwxr-xr-x. 3 root root   66 May 23 23:34 ..
 $
 
 ````
+
+## Usage
+
+````bash
+$ ./logaggregator.py --help
+usage: logaggregator.py [-h]
+                        start_date start_time end_date end_time logs_folder
+                        process_name
+
+Extract logs between two timestamps and print them to a file.
+
+positional arguments:
+  start_date    Enter start date in yyyy-mm-dd format Eg. 2020-02-20
+  start_time    Enter start time in hh:mm:ss format eg. 18:57:20
+  end_date      Enter end date in yyyy-mm-dd format Eg. 2020-02-26
+  end_time      Enter end time in hh:mm:ss format eg. 09:18:36
+  logs_folder   Enter absolute path of logs directory eg. /var/logs
+  process_name  Enter process name eg. nbi
+
+optional arguments:
+  -h, --help    show this help message and exit
+  
+$
+````
