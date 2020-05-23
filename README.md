@@ -26,7 +26,7 @@ $ 17-02-2020 07:34:56 - CPU Idle time below 15%
 
 If you want the utility to be able to process this new log file, you will need to add a python plugin module with the name plugin_serverhealth.py to the plugins/ folder which resides in the same directory as your main script. The plugin should specify the regex pattern to locate the timestamp in the log line. It should also specify the position number of year, month, day, hour, minute, second in the matching regex pattern
 
-````bash
+```
 $ cat plugins/plugin_serverhealth.py
 #!/usr/bin/env python
 
@@ -46,14 +46,14 @@ class serverhealth(Plugin):
         second_position = 6
 
         log_filename_pattern = 'serverhealth.log*'
-[root@localhost plugins]# 
-````
+$
+```
 
 ## Installation
 
 Download the zip file of this repository to your Linux system and unzip it. 
 
-````bash
+```
 $ ls -ltra
 total 12
 -rw-r--r--.  1 root root 4649 May 23 23:34 LogAggregator-master.zip
@@ -86,11 +86,11 @@ drwxr-xr-x. 3 root root   86 May 16 01:28 .
 drwxr-xr-x. 3 root root   66 May 23 23:34 ..
 $
 
-````
+```
 
 ## Usage
 
-````bash
+```
 $ ./logaggregator.py --help
 usage: logaggregator.py [-h]
                         start_date start_time end_date end_time logs_folder
@@ -110,13 +110,13 @@ optional arguments:
   -h, --help    show this help message and exit
   
 $
-````
+```
 
 Example:
 Let's suppose you have log files of the pattern nbi.log.X stored in /app/logs folder. 
 You need to collect all log lines between 30th Jan 2020 16:00:00 hrs and 18th Feb 18:50:00 hrs.
 
-````bash
+```
 
 $ cd /app/logs
 $ ls -ltra
@@ -164,4 +164,4 @@ $ tail -5 /tmp/nbi_log_24_05_20_00_03
 2020-02-18 18:49:40,185 INFO [EMSHandler] - getEMS() entered
 2020-02-18 18:49:40,188 INFO [EMSHandler] - getEMS() returned
 $
-````
+```
