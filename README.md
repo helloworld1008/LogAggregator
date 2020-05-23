@@ -113,8 +113,8 @@ $
 ```
 
 Example:
-Let's suppose you have log files of the pattern nbi.log.X stored in /app/logs folder. 
-You need to collect all log lines between 30th Jan 2020 16:00:00 hrs and 18th Feb 18:50:00 hrs.
+Let's suppose you have log files of the pattern ```nbi```.log.X stored in ```/app/logs``` folder. 
+You need to collect all log lines between ```30th Jan 2020 16:00:00 hrs``` and ```18th Feb 2020 18:50:00 hrs```.
 
 ```
 
@@ -145,7 +145,7 @@ drwxr-xr-x. 2 root root   98 May 24 00:03 plugins
 -rw-r--r--. 1 root root 2095 May 16 01:28 README.md
 $
 $
-$ ./logaggregator.py 2020-01-30 16:00:00 2020-02-18 18:50:00 /root/mydata/ nbi
+$ ./logaggregator.py 2020-01-30 16:00:00 2020-02-18 18:50:00 /app/logs/ nbi
 Output saved to /tmp/nbi_log_24_05_20_00_03
 $
 $
