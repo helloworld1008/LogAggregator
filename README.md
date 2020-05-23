@@ -148,4 +148,20 @@ $
 $ ./logaggregator.py 2020-01-30 16:00:00 2020-02-18 18:50:00 /root/mydata/ nbi
 Output saved to /tmp/nbi_log_24_05_20_00_03
 $
+$
+$ head -5 /tmp/nbi_log_24_05_20_00_03
+2020-01-30 16:00:29,873 INFO [EMSHandler] - getEMS() entered
+2020-01-30 16:00:29,876 INFO [EMSHandler] - getEMS() returned
+2020-01-30 16:01:29,877 INFO [EMSHandler] - getEMS() entered
+2020-01-30 16:01:29,880 INFO [EMSHandler] - getEMS() returned
+2020-01-30 16:01:37,772 INFO [EmsSession] - Session 1 was pinged by NMS
+$
+$
+$ tail -5 /tmp/nbi_log_24_05_20_00_03
+2020-02-18 18:47:40,179 INFO [EMSHandler] - getEMS() returned
+2020-02-18 18:48:40,181 INFO [EMSHandler] - getEMS() entered
+2020-02-18 18:48:40,183 INFO [EMSHandler] - getEMS() returned
+2020-02-18 18:49:40,185 INFO [EMSHandler] - getEMS() entered
+2020-02-18 18:49:40,188 INFO [EMSHandler] - getEMS() returned
+$
 ````
