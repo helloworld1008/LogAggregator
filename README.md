@@ -11,7 +11,7 @@ This tool is modular. You can add modules to process a new category of log files
 
 Example: Your application added a new type of log file named serverhealth.log.N where N is any number. Additionally, this log file uses timestamp format DD-MM-YYYY hh:mm:ss
 
- ````bash
+ ```
 $ ls -l
 $ serverhealth.log.5
 $ serverhealth.log.4
@@ -22,7 +22,7 @@ $
 $ cat serverhealth.log.1 | tail -1
 $ 17-02-2020 07:34:56 - CPU Idle time below 15%
 
-````
+```
 
 If you want the utility to be able to process this new log file, you will need to add a python plugin module with the name plugin_serverhealth.py to the plugins/ folder which resides in the same directory as your main script. The plugin should specify the regex pattern to locate the timestamp in the log line. It should also specify the position number of year, month, day, hour, minute, second in the matching regex pattern
 
