@@ -142,13 +142,6 @@ class LogAggregator:
 
 	def logLinesExtractor(self):
 
-		#print self.log_plugin.log_filename_pattern
-
-		#print "\n"
-
-		#print self.log_plugin.log_timestamp_pattern
-
-		#print "\n"
 
 		output_filename = '/tmp/' + self.log_plugin.__class__.__name__ + '_log_' + datetime.datetime.now().strftime("%d_%m_%y_%H_%M")
 
@@ -238,9 +231,5 @@ if __name__ == '__main__':
 	args = parser.parse_args()
 
 	l = LogAggregator(args.start_date, args.start_time, args.end_date, args.end_time, args.logs_folder, args.process_name)
-
-	#l = LogAggregator('2020-02-03', '19:35:17', '2020-02-10', '11:29:00', '/root/mydata', 'nbi')
-
-	#print l.start_timestamp, l.end_timestamp
 
 	l.logLinesExtractor()
