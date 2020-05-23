@@ -111,3 +111,41 @@ optional arguments:
   
 $
 ````
+
+Example:
+Let's suppose you have log files of the pattern nbi.log.X stored in /app/logs folder. 
+You need to collect all log lines between 30th Jan 2020 16:00:00 hrs and 18th Feb 18:50:00 hrs.
+
+````bash
+
+$ cd /app/logs
+$ ls -ltra
+total 76356
+-rwxr-xr-x.  1 root root  5242903 Jan 11 19:43 nbi.log.10
+-rw-r--r--.  1 root root  5242947 Jan 15 13:00 nbi.log.9
+-rw-r--r--.  1 root root  5243471 Jan 22 17:19 nbi.log.8
+-rw-r--r--.  1 root root  5243214 Jan 30 16:06 nbi.log.7
+-rw-r--r--.  1 root root  5242908 Feb  3 19:35 nbi.log.6
+-rw-r--r--.  1 root root  5242887 Feb 10 11:28 nbi.log.5
+-rw-r--r--.  1 root root  5243377 Feb 18 12:40 nbi.log.4
+-rw-r--r--.  1 root root  5261500 Feb 24 19:12 nbi.log.3
+-rw-r--r--.  1 root root  5242923 Mar  4 12:11 nbi.log.2
+-rw-r--r--.  1 root root  5243294 Mar 10 14:33 nbi.log.1
+-rw-r--r--.  1 root root  1576424 Mar 12 09:06 nbi.log
+drwxr-xr-x.  2 root root      259 Apr 29 09:17 .
+dr-xr-x---. 14 root root     4096 May 23 23:34 ..
+$
+$
+$ cd /home/user/LogAggregator-master
+$ ls -l
+total 16
+-rwxr-xr-x. 1 root root 5670 May 16 01:28 logaggregator.py
+-rwxr-xr-x. 1 root root  761 May 16 01:28 PluginManager.py
+drwxr-xr-x. 2 root root   98 May 24 00:03 plugins
+-rw-r--r--. 1 root root 2095 May 16 01:28 README.md
+$
+$
+$ ./logaggregator.py 2020-01-30 16:00:00 2020-02-18 18:50:00 /root/mydata/ nbi
+Output saved to /tmp/nbi_log_24_05_20_00_03
+$
+````
